@@ -1,0 +1,42 @@
+header {
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 20px);
+  max-width: var(--max-page-width);
+  background-color: var(--background-white);
+  padding-top: 1em;
+  padding-left: 0.5em;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--font-black);
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
+
+main {
+  display: block;
+  padding: 3em 0.5em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(100vw - 20px);
+  max-width: var(--max-page-width);
+  background-color: var(--background-white);
+  text-align: right;
+  padding-bottom: 0.75em;
+  padding-right: 0.5em;
+
+  a {
+    text-decoration: none;
+    color: var(--font-black);
+
+    &:hover {
+      color: var(--font-hightlight);
+    }
+  }
+}
