@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppModule } from '../../app.module';
+import { AppModule } from '../../app/app.module';
 
 import { ItunesService } from '../../services/itunes.service';
 import { FilterService } from '../../services/filter.service';
 import { AlbumComponent } from './album.component';
-import { OverviewComponent } from '../../overview/overview.component';
+import { OverviewComponent } from '../../app/overview/overview.component';
 
 describe('AlbumComponent', () => {
   let component: AlbumComponent;

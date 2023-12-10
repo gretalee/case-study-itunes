@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FilterService } from '../services/filter.service';
-import { AlbumsStoreService } from '../services/albums-store.service';
-import type { SortCriteria } from '../services/filter.service';
+import { FilterService } from '../../services/filter.service';
+import { AlbumsStoreService } from '../../services/albums-store.service';
+import type { SortCriteria } from '../../services/filter.service';
 
 @Component({
   selector: 'app-overview',

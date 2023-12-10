@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { AppModule } from '../../app.module';
+import { AppModule } from '../../app/app.module';
 import { MusicListComponent } from './music-list.component';
 import type { Album } from '../../services/albums-store.service';
 import mockedAlbums from './album-mock';

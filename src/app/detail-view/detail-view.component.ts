@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ItunesService } from '../services/itunes.service';
-import type { Album } from '../services/albums-store.service';
+import { ItunesService } from '../../services/itunes.service';
+import type { Album } from '../../services/albums-store.service';
 
 /**
  * TODO: After a reload the back-to-overview-link
