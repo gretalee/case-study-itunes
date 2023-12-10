@@ -1,4 +1,10 @@
-<!-- TODO: show loading indicator or better a scalaton !!! -->
+<div *ngIf="!albums || albums.length === 0" class="album-skeleton">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
 
 <div class="music-list">
   <app-album

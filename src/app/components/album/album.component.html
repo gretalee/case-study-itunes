@@ -1,24 +1,57 @@
 <div *ngIf="album" class="album">
-  <a
-    title="Song details"
-    [routerLink]="withLink ? ['/details', album.collectionId] : null"
-  >
-    <img
-      [src]="album.artworkUrl100"
-      [alt]="album.collectionName"
-      width="100"
-      height="100"
-    />
-  </a>
-  <div class="details">
+  <div class="genre">{{ album.primaryGenreName }}</div>
+  <div class="content-wrapper">
     <a
       title="Song details"
       [routerLink]="withLink ? ['/details', album.collectionId] : null"
     >
-      <h2>{{ album.collectionName }}</h2>
-      <h3>{{ album.artistName }}</h3>
-      <p>released in {{ album.releaseDate | date }}</p>
-      <p>{{ album.collectionPrice | currency }}</p>
+      <img
+        [src]="album.artworkUrl100"
+        [alt]="album.collectionName"
+        width="100"
+        height="100"
+      />
     </a>
+    <div class="details">
+      <a
+        title="Song details"
+        [routerLink]="withLink ? ['/details', album.collectionId] : null"
+      >
+        <h2>{{ album.collectionName }}</h2>
+        <h3>{{ album.artistName }}</h3>
+        <p>
+          {{ album.trackCount }}
+          {{ album.trackCount === 1 ? "song" : "songs" }},
+          {{ album.releaseDate | date : "yyyy" }}
+        </p>
+        <p>{{ album.collectionPrice | currency }}</p>
+        <p>{{ album.copyright }}</p>
+      </a>
+
+      <a
+        *ngIf="withAppleLink && album.collectionViewUrl"
+        class="apple-link"
+        [href]="album.collectionViewUrl"
+        target="_blank"
+      >
+        Check it out on Apple Music
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="14"
+          height="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m10 6h-4c-1.10457 0-2 .89543-2 2v10c0 1.1046.89543 2 2 2h10c1.1046 0 2-.8954 2-2v-4m-4-10h6m0 0v6m0-6-10 10"
+            stroke="#4a5568"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </div>
   </div>
 </div>

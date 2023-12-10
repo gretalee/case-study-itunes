@@ -9,4 +9,5 @@ import type { Album } from '../../services/albums-store.service';
 export class AlbumComponent {
   @Input() album: Album | null = null;
   @Input() withLink: boolean = false;
+  @Input() withAppleLink: boolean = false;
 }

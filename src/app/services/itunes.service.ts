@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-export interface Todo {
-  id?: string;
-  title: string;
-  isCompleted: boolean;
-}
+// TODO: add loading state !!!
 
 @Injectable({
   providedIn: 'root',

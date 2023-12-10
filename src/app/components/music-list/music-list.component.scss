@@ -3,3 +3,29 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.album-skeleton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & > div {
+    width: 100%;
+    height: 165px;
+    margin-top: 30px;
+    background-color: var(--skeleton-color);
+    opacity: 0.8;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @media screen and (min-width: 660px) {
+      width: var(--item-width);
+      margin-right: 20px;
+    }
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}

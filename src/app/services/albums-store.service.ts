@@ -26,7 +26,7 @@ export type Album = {
   country: string;
   currency: string;
   primaryGenreName: string;
-  releaseDate: Date;
+  releaseDate: string;
   trackCount: number;
   wrapperType: string;
 };

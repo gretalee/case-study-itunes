@@ -2,14 +2,33 @@
   width: 100%;
 
   @media screen and (min-width: 660px) {
-    width: 250px;
+    width: var(--item-width);
     margin-right: 20px;
   }
 }
 
 .album {
-  display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
+
+  .genre {
+    background-color: #e78c66;
+    margin-bottom: 10px;
+    color: white;
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    text-transform: uppercase;
+    // text-align: center;
+    font-size: 1em;
+    letter-spacing: 8px;
+    opacity: 0.6;
+  }
+
+  .content-wrapper {
+    display: flex;
+  }
 
   a {
     text-decoration: none;
@@ -20,6 +39,7 @@
   }
 
   img {
+    margin-top: 7px;
     margin-right: 10px;
   }
 
@@ -37,15 +57,24 @@
       margin: 3px 0 0;
       font-size: 0.75em;
     }
+
+    .apple-link {
+      display: block;
+      padding-top: 20px;
+      font-size: 1em;
+      svg {
+        margin-bottom: -1px;
+        path {
+          stroke: var(--font-black);
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 660px) {
     .details {
       h2 {
-        font-size: 0.75em;
-      }
-      h2 {
-        font-size: 0.75em;
+        font-size: 1em;
       }
     }
   }
