@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { AppModule } from '../../app.module';
+
+import { ItunesService } from '../../services/itunes.service';
+import { FilterService } from '../../services/filter.service';
 import { AlbumComponent } from './album.component';
+import { OverviewComponent } from '../../overview/overview.component';
 
 describe('AlbumComponent', () => {
   let component: AlbumComponent;
@@ -8,10 +13,11 @@ describe('AlbumComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AlbumComponent]
-    })
-    .compileComponents();
-    
+      imports: [AppModule],
+      declarations: [],
+      providers: [ItunesService, FilterService],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AlbumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

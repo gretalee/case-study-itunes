@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { AppModule } from '../app.module';
 import { DetailViewComponent } from './detail-view.component';
 
 describe('DetailViewComponent', () => {
@@ -8,10 +8,9 @@ describe('DetailViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DetailViewComponent]
-    })
-    .compileComponents();
-    
+      imports: [AppModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DetailViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
