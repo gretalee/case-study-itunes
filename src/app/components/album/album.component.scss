@@ -1,3 +1,12 @@
+:host {
+  width: 100%;
+
+  @media screen and (min-width: 660px) {
+    width: 250px;
+    margin-right: 20px;
+  }
+}
+
 .album {
   display: flex;
   margin-top: 20px;
@@ -27,6 +36,17 @@
     p {
       margin: 3px 0 0;
       font-size: 0.75em;
+    }
+  }
+
+  @media screen and (min-width: 660px) {
+    .details {
+      h2 {
+        font-size: 0.75em;
+      }
+      h2 {
+        font-size: 0.75em;
+      }
     }
   }
 }

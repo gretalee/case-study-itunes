@@ -6,6 +6,8 @@ header {
   background-color: var(--background-white);
   padding-top: 1em;
   padding-left: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   a {
     text-decoration: none;
@@ -13,6 +15,7 @@ header {
     color: var(--font-black);
     font-weight: bold;
     font-size: 2em;
+    white-space: nowrap;
   }
 }
 

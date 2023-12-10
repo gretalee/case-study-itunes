@@ -1,3 +1,9 @@
-<div *ngFor="let album of albums">
-  <app-album [album]="album" [withLink]="true"></app-album>
+<!-- TODO: show loading indicator or better a scalaton !!! -->
+
+<div class="music-list">
+  <app-album
+    *ngFor="let album of albums"
+    [album]="album"
+    [withLink]="true"
+  ></app-album>
 </div>

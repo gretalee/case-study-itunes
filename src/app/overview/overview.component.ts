@@ -12,6 +12,7 @@ export class OverviewComponent {
   searchTerm: string = '';
   sortCriteria: SortCriteria = '';
   albums: any[] = [];
+  isInitialized: boolean = false;
 
   constructor(
     public albumsStore: AlbumsStoreService,
@@ -21,7 +22,11 @@ export class OverviewComponent {
       this.searchTerm = data.searchTerm;
       this.sortCriteria = data.sortBy;
       this.albumsStore.updateSorting(data.sortBy);
-      this.albumsStore.searchFor(data.searchTerm);
+
+      if (!this.isInitialized || data.searchTerm !== this.searchTerm) {
+        this.albumsStore.searchFor(data.searchTerm);
+        this.isInitialized = true;
+      }
     });
   }
 
