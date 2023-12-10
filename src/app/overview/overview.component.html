@@ -1,8 +1,8 @@
 <app-filter
   [searchTerm]="searchTerm"
-  (searchClicked)="albumsStore.searchFor($event)"
+  (searchClicked)="search($event)"
   [sortedBy]="sortCriteria"
-  (onSortUpdate)="albumsStore.updateSorting($event)"
+  (onSortUpdate)="sort($event)"
 ></app-filter>
 
 <app-music-list [albums]="albumsStore.sortedAlbums$ | async" />

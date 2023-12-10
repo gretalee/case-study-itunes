@@ -1,14 +1,13 @@
-import { Injectable, Optional } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ItunesService } from './itunes.service';
+import type { SortCriteria } from './filter.service';
 
 /**
  * This is a nice way to handle a store as a service.
  * Seen here: https://dev.to/avatsaev/simple-state-management-in-angular-with-only-services-and-rxjs-41p8
  */
-
-export type SortCriteria = 'name' | 'releaseDate' | 'price';
 
 export type Album = {
   amgArtistId: number;
