@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import type { SortCriteria } from '../../services/albums-store.service';
 
 @Component({
   selector: 'app-filter',
@@ -7,15 +8,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FilterComponent {
   @Input() searchTerm: string = '';
-  @Input() sortedBy: string = '';
+  @Input() sortedBy: SortCriteria = 'name';
   @Output() searchClicked: EventEmitter<string> = new EventEmitter<string>();
-  @Output() onSortUpdate: EventEmitter<string> = new EventEmitter<string>();
+  @Output() onSortUpdate: EventEmitter<SortCriteria> =
+    new EventEmitter<SortCriteria>();
 
   search() {
     this.searchClicked.emit(this.searchTerm);
   }
 
-  setSortingTo(criteria: string) {
+  setSortingTo(criteria: SortCriteria) {
     this.sortedBy = criteria;
     this.onSortUpdate.emit(this.sortedBy);
   }

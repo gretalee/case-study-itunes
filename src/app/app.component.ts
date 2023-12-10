@@ -27,7 +27,6 @@ export class AppComponent {
   }
 
   get sortedAlbums(): any[] {
-    // Implement sorting logic based on the selected criteria
     if (this.sortCriteria === 'name') {
       return this.albums
         .slice()
@@ -46,7 +45,6 @@ export class AppComponent {
         .sort((a, b) => a.collectionPrice - b.collectionPrice);
     }
 
-    // Default to returning unsorted albums
     return this.albums;
   }
 }

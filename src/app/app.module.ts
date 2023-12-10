@@ -10,6 +10,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MusicListComponent } from './components/music-list/music-list.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { ItunesService } from './services/itunes.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterComponent } from './components/filter/filter.component';
     FormsModule,
     RouterModule.forRoot(routes),
   ],
+  providers: [ItunesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -2,6 +2,21 @@
 <button (click)="search()">Search</button>
 
 <label for="sortCriteria">Sort By:</label>
-<button (click)="setSortingTo('name')">Album Name</button>
-<button (click)="setSortingTo('releaseDate')">Release Date</button>
-<button (click)="setSortingTo('price')">Price</button>
+<button
+  [ngClass]="{ active: sortedBy === 'name' }"
+  (click)="setSortingTo('name')"
+>
+  Album Name
+</button>
+<button
+  [ngClass]="{ active: sortedBy === 'releaseDate' }"
+  (click)="setSortingTo('releaseDate')"
+>
+  Release Date
+</button>
+<button
+  [ngClass]="{ active: sortedBy === 'price' }"
+  (click)="setSortingTo('price')"
+>
+  Price
+</button>

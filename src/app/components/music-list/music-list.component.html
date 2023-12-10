@@ -1,13 +1,13 @@
 <div>
   <app-filter
     [searchTerm]="searchTerm"
-    (searchClicked)="search2($event)"
+    (searchClicked)="albumsStore.searchFor($event)"
     [sortedBy]="sortCriteria"
-    (onSortUpdate)="setSortingTo($event)"
+    (onSortUpdate)="albumsStore.updateSorting($event)"
   ></app-filter>
 </div>
 
-<div class="album" *ngFor="let album of sortedAlbums">
+<div class="album" *ngFor="let album of albumsStore.sortedAlbums$ | async">
   <img
     [src]="album.artworkUrl100"
     [alt]="album.collectionName"
