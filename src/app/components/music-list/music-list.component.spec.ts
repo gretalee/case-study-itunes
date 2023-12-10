@@ -29,4 +29,17 @@ describe('MusicListComponent', () => {
     const resultArray = debugElement.queryAll(By.css('app-album'));
     expect(resultArray.length).toEqual(mockedAlbums.length);
   });
+
+  it('should render an album name and and an image for each album', () => {
+    const { debugElement } = fixture;
+    const resultArray = debugElement.queryAll(By.css('app-album'));
+    resultArray.forEach((album, index) => {
+      expect(album.query(By.css('h2')).nativeElement.textContent).toContain(
+        mockedAlbums[index]?.collectionName
+      );
+      expect(album.query(By.css('img')).nativeElement.src).toContain(
+        mockedAlbums[index]?.artworkUrl100
+      );
+    });
+  });
 });

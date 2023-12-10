@@ -8,18 +8,19 @@ The challenge was to implement a music albums list served by the iTunes API. The
 
 - Project setup, github
 - Routing
-- Albums list
+- iTunes request service
+- List of albums
 - Search term input
 - Sorting
 - Detail view (reloadable)
-- Services to hold the state including localStorage
+- Services to manage the state including localStorage
+- Responsive layout (ok, it could be nicer)
 
 ### Not yet implemented
 
-- Full responsive layout (could be nicer)
-- Tests (sorry, time was really over)
+- Unit Tests (I made them running and added some basic tests .. there was no more time for more)
 - Track list in detail view (I couldn't find the right API)
-- Infinite Scrolling
+- Infinite Scrolling (see comment below)
 
 ### Used browser:
 
