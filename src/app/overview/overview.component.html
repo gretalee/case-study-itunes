@@ -1,5 +1,8 @@
-<h2>Overview:</h2>
+<app-filter
+  [searchTerm]="searchTerm"
+  (searchClicked)="albumsStore.searchFor($event)"
+  [sortedBy]="sortCriteria"
+  (onSortUpdate)="albumsStore.updateSorting($event)"
+></app-filter>
 
-<a title="Song details" [routerLink]="['/details', '15']">Go to song 15</a>
-
-<app-music-list />
+<app-music-list [albums]="albumsStore.sortedAlbums$ | async" />

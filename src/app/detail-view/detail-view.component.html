@@ -1,9 +1,5 @@
-<h2>Check the Details</h2>
-
 <div>
   <a title="back to overview" routerLink="/">&lt;&lt; Overview</a>
 </div>
 
-<div *ngIf="song">
-  <h3>Id: {{ song }}</h3>
-</div>
+<app-album *ngIf="album" [album]="album"></app-album>

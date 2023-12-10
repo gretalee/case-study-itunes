@@ -1,24 +1,3 @@
-<div>
-  <app-filter
-    [searchTerm]="searchTerm"
-    (searchClicked)="albumsStore.searchFor($event)"
-    [sortedBy]="sortCriteria"
-    (onSortUpdate)="albumsStore.updateSorting($event)"
-  ></app-filter>
-</div>
-
-<div class="album" *ngFor="let album of albumsStore.sortedAlbums$ | async">
-  <img
-    [src]="album.artworkUrl100"
-    [alt]="album.collectionName"
-    width="100"
-    height="100"
-  />
-  <div>
-    <h2>{{ album.collectionName }}</h2>
-    <p>Artist: {{ album.artistName }}</p>
-    <p>Genre: {{ album.primaryGenreName }}</p>
-    <p>Release Date: {{ album.releaseDate | date }}</p>
-    <p>Price: {{ album.collectionPrice | currency }}</p>
-  </div>
+<div *ngFor="let album of albums">
+  <app-album [album]="album" [withLink]="true"></app-album>
 </div>

@@ -1,17 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-export interface Todo {
-  id?: string;
-  title: string;
-  isCompleted: boolean;
-}
-
 @Injectable({
   providedIn: 'root',
 })
 export class ItunesService {
-  private readonly apiBaseUrl = 'https://itunes.apple.com/search';
+  private readonly apiBaseUrl = 'https://itunes.apple.com';
 
   constructor(private http: HttpClient) {}
 
@@ -20,6 +14,13 @@ export class ItunesService {
       term: searchTerm,
       entity: 'album',
     };
-    return this.http.get(this.apiBaseUrl, { params });
+    return this.http.get(`${this.apiBaseUrl}/search`, { params });
+  }
+
+  lookupAlbum(albumId: string) {
+    const params = {
+      id: albumId,
+    };
+    return this.http.get(`${this.apiBaseUrl}/lookup`, { params });
   }
 }

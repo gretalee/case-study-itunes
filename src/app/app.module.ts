@@ -10,6 +10,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { MusicListComponent } from './components/music-list/music-list.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { AlbumComponent } from './components/album/album.component';
 import { ItunesService } from './services/itunes.service';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ItunesService } from './services/itunes.service';
     DetailViewComponent,
     MusicListComponent,
     FilterComponent,
+    AlbumComponent,
   ],
   imports: [
     CommonModule,

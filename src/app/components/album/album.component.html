@@ -1,0 +1,24 @@
+<div *ngIf="album" class="album">
+  <a
+    title="Song details"
+    [routerLink]="withLink ? ['/details', album.collectionId] : null"
+  >
+    <img
+      [src]="album.artworkUrl100"
+      [alt]="album.collectionName"
+      width="100"
+      height="100"
+    />
+  </a>
+  <div class="details">
+    <a
+      title="Song details"
+      [routerLink]="withLink ? ['/details', album.collectionId] : null"
+    >
+      <h2>{{ album.collectionName }}</h2>
+      <h3>{{ album.artistName }}</h3>
+      <p>released in {{ album.releaseDate | date }}</p>
+      <p>{{ album.collectionPrice | currency }}</p>
+    </a>
+  </div>
+</div>
